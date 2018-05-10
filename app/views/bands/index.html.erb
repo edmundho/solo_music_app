@@ -1,10 +1,21 @@
 
-
 <h3>
   bands
 </h3>
 
-<ul>
-  <% @bands.each do |band| %>
-  <li><%= band.name %></li>
-</ul>
+<%= render 'shared/errors' %>
+<a class="llinks" href="<%= new_band_url %>" >add band</a>
+
+<div class="bands_list">
+  <ul>
+    <% @bands.each do |band| %>
+    <li><%= band.name %>
+      <a href="<%= edit_band_url(band) %>">edit band</a>
+      <form action="<%= band_url(band) %>" method="post">
+          <input type="hidden" name="_method" value="delete">
+          <input type="submit" value="delete band">
+      </form>
+    </li>
+    <% end %>
+  </ul>
+</div>

@@ -14,11 +14,31 @@
  *= require_self
  */
 
+html {
+    background-color: beige;
+}
+
+h1 {
+    background-color: burlywood;
+    text-align: center;
+}
+
+body {
+    padding: 20px;
+    width: 75%;
+    margin: 0 auto;
+    /* text-align: center; */
+}
+
+.bands_list {
+    display: block;
+    align-content: center;
+}
 
  .app-header {
-    display: flex;
     font-style: italic;
     font-family: PT mono;
+    text-align: center;
  }
 
  .llinks {

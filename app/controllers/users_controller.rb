@@ -26,11 +26,7 @@ class UsersController < ApplicationController
       render :show
     end
   end
-
-  def current_user
-    @user
-  end
-
+  
   private
 
   def user_params
