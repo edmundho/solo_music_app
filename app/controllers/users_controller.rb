@@ -26,8 +26,6 @@ class UsersController < ApplicationController
     end
   end
 
- 
-
   def current_user
     @user
   end

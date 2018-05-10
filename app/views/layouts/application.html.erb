@@ -10,6 +10,19 @@
   </head>
 
   <body>
+
+    <h1 class="app-header">music app</h1>
+
+    <% if current_user.nil? %>
+      <a class="llinks" href="<%= new_user_url %>">sign up</a>
+      <a class="llinks" href="<%= new_session_url %>">log in</a>
+      <br><br>
+    <% else %>
+      <form action="<%= session_url%>" method="delete">
+        <input type="submit" value="log out">
+      </form>
+    <% end %>
+  
     <%= yield %>
   </body>
 </html>

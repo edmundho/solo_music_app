@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+
+
+ .app-header {
+    display: flex;
+    font-style: italic;
+    font-family: PT mono;
+ }
+
+ .llinks {
+   background-color: burlywood;
+   border-radius: 5px;
+ }
