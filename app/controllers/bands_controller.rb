@@ -10,7 +10,8 @@ class BandsController < ApplicationController
   end
 
   def show
-    @band = Band.find_by(name: params[:name])
+    @band = Band.find_by(id: params[:id])
+    render :show
   end
 
   def create

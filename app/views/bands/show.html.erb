@@ -1,0 +1,16 @@
+<ul>
+
+  <li>band name: <%= @band.name %></li>
+
+  <li>band created: <%= @band.created_at %></li>
+
+  <br><br>
+  <li><a href="<%= edit_band_url(@band) %>">edit band</a></li>
+  <li>
+    <form action="<%= band_url(@band) %>" method="post">
+      <input type="hidden" name="_method" value="delete">
+      <input type="submit" value="delete band">
+    </form>
+  </li>
+</ul>
+
