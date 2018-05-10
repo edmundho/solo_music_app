@@ -18,7 +18,9 @@
       <a class="llinks" href="<%= new_session_url %>">log in</a>
       <br><br>
     <% else %>
-      <form action="<%= session_url%>" method="delete">
+      <%= current_user.email %>
+      <form action="<%= session_url%>" method="post">
+        <input type="hidden" name="_method" value="delete">
         <input type="submit" value="log out">
       </form>
     <% end %>
