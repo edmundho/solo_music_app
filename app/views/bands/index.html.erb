@@ -1,7 +1,7 @@
 
-<h3>
+<h2>
   bands
-</h3>
+</h2>
 
 <%= render 'shared/errors' %>
 <a class="llinks" href="<%= new_band_url %>" >add band</a>
@@ -11,6 +11,7 @@
     <% @bands.each do |band| %>
     <li>
       <a href="<%= band_url(band) %>"><%= band.name %></a>
+      <br><br>
     </li>
     <% end %>
   </ul>
